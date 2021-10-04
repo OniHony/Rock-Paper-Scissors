@@ -4,22 +4,16 @@ const computerPlay = function () {
   return choice[Math.floor(Math.random() * choice.length)];
 };
 // added the parse into the equation today did not work how i wanted it to
- 
-// let answer = (`Rock, Paper, Scissors`){
-//  if (answer = "Rock") {
-//    return ('Rock')
-// } else if (answer = "Paper") {
-//   return ('Paper')
-// } else {
-//   return ('Scissors')
-// }
-// }
-// const choices = parseInt(prompt(`Choose one; ${choice}`))
+// trying to find out how to make the choices input = the playerSelection 
+
+const choices = (prompt(`Choose one; ${choice}`))
+// OG const choices = parseInt(prompt(`Choose one; ${choice}`))
+// parseInt was the problem for parseInt is used to return the value of 
+// an integer not a string consisting of words! 
 
 const computerSelection = computerPlay();
-const playerSelection = ('Rock')
-
-// trying to find out how to make the choices input = the playerSelection 
+const playerSelection = (choices)
+ 
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
@@ -41,3 +35,6 @@ function playRound(playerSelection, computerSelection) {
 // tried to figure out how to log the playRound function multiple times to 
 // create the game() function  not sure if i should multiply by 5 or repeat 5x
 console.log(playRound(playerSelection, computerSelection));
+
+
+
